@@ -6,7 +6,7 @@ const genl_routes = require('./router/general.js').general;
 
 
 let users = []
-//Function to check if the user exists
+
 const doesExist = (username)=>{
   let userswithsamename = users.filter((user)=>{
     return user.username === username
@@ -17,7 +17,7 @@ const doesExist = (username)=>{
     return false;
   }
 }
-//Function to check if the user is authenticated
+
 const authenticatedUser = (username,password)=>{
   let validusers = users.filter((user)=>{
     return (user.username === username && user.password === password)
